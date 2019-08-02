@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+ 
+ <div class="BG"></div>
+  
+  <div id="cialo">                                                                                                                                                                                                            <form name="pole" id="P" method="post" action="skrypt.php">
+       <input type="text" name="Tekst">
+   </form>
+   
+   <table id="T1">                                                                                                                                                                                                            <td><button id="C" onclick="back()">C</button></td><td><input type="button" onclick="clean()" value="D"></td><td><button id="dzielenie" onclick="funkcja('/')">/</button></td><td><button id="mnożenie" onclick="funkcja('*')">X</button></td></table>
+   
+   <table id="T2"><td><button id="seven" onclick="funkcja(7)" >7</button></td><td><button id="eight" onclick="funkcja(8)">8</button></td><td><button id="nine" onclick="funkcja(9)">9</button></td><td><button id="odejmowanie" onclick="funkcja('-')">-</button></td>                                                                                                                                                                                </table>
+   
+   <table id="T3"><td><button id="four" onclick="funkcja(4)">4</button></td><td><button id="five"onclick="funkcja(5)">5</button></td><td><button id="six" onclick="funkcja(6)">6</button></td><td><button id="dodawanie" onclick="funkcja('+')">+</button></td>                                                                                                                                                                                </table>
+   
+   <table id="T4"><td><button id="one" 
+onclick="funkcja(1)">1</button></td><td><button id="two" onclick="funkcja(2)">2</button></td><td><button id="three" onclick="funkcja(3)">3</button></td>                                </table>
+   
+   
+   <table id="T5"><td><button id="zero" onclick="funkcja(0)">0</button></td><td><button id="kropka" onclick="funkcja('.')">.</button></td><td><button id="rownosc" onclick="wynik()">=</button></td>
+   </table>
+   </div>
+   
+   
+   
+  <script>
+      
+    
+      
+   function funkcja(num){
+       P.Tekst.value=P.Tekst.value+num;
+   };
+      
+      function wynik(dane_3){
+          var dane=P.Tekst.value;
+          if(dane){
+              P.Tekst.value=eval(dane);
+          };
+      };
+      
+      
+      
+      
+      function back(){
+         var dane2=P.Tekst.value;
+          
+        P.Tekst.value=dane2.substring(0,dane2.length-1);
+      };
+      
+      
+      function clean(){
+          P.Tekst.value="";
+      };
+      
+      
+    
+</script>  
+</body>
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="">

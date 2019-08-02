@@ -1,0 +1,74 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+   
+}
+
+#zero{
+   width: 60px;
+   font-size: 30px;
+}
+
+#kropka{
+    width: 45px;
+    font-size: 30px;
+}
+
+#rownosc{
+    position: absolute;
+    height: 88px;
+    top: 169px;
+    font-size: 30px;
+    left: 115px;
+}
+
+
+#odejmowanie{
+    width: 35px;
+}
+
+#cialo{
+    position: absolute;
+    top: 20%;
+    left: 46%;
+    right: 95%;
+    bottom: 80%;
+   
+
+}
+
+input[type=text]{
+    width: 150px;
+    margin-left: 3px;
+    font-weight: bold;
+    font-size: 20px; 
+    
+}
+
+input[type=button]{
+    font-size: 30px; 
+    cursor: pointer;
+}
+
+button{
+   font-size: 30px; 
+    cursor: pointer;
+}
+
+input[type=button]:hover{
+    transition: all 1s;
+    background-color: aqua;
+}
+
+html{
+    height: 100%;
+    background-image: linear-gradient(red, yellow);
+}
+
+
+button:hover{
+   transition: all 1s;
+    background-color: aqua;
+}
