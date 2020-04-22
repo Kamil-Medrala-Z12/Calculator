@@ -1,74 +1,60 @@
-body{
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-    margin: 0;
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+}
+
+body {
     padding: 0;
-    height: 100%;
-   
+    margin: 0;
+    background: linear-gradient(to right, #9c3ddd, #00FF6C);
 }
 
-#zero{
-   width: 60px;
-   font-size: 30px;
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
-#kropka{
-    width: 45px;
-    font-size: 30px;
-}
-
-#rownosc{
-    position: absolute;
-    height: 88px;
-    top: 169px;
-    font-size: 30px;
-    left: 115px;
-}
-
-
-#odejmowanie{
-    width: 35px;
-}
-
-#cialo{
-    position: absolute;
-    top: 20%;
-    left: 46%;
-    right: 95%;
-    bottom: 80%;
-   
-
-}
-
-input[type=text]{
-    width: 150px;
-    margin-left: 3px;
-    font-weight: bold;
-    font-size: 20px; 
-    
-}
-
-input[type=button]{
-    font-size: 30px; 
+.calculator-grid>button {
     cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
 }
 
-button{
-   font-size: 30px; 
-    cursor: pointer;
+.calculator-grid>button:hover {
+    background-color: rgba(255, 255, 255, .9);
 }
 
-input[type=button]:hover{
-    transition: all 1s;
-    background-color: aqua;
+.span-two {
+    grid-column: span 2;
 }
 
-html{
-    height: 100%;
-    background-image: linear-gradient(red, yellow);
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
+.output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
 
-button:hover{
-   transition: all 1s;
-    background-color: aqua;
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
 }
