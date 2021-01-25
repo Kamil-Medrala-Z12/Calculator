@@ -1,3 +1,3 @@
 # Calculator
 
-Add link to active version: http://calculator.refy.pl/
+Add link to active version: https://kamil-medrala-z12.github.io/Calculator/
